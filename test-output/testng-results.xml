@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7444" started-at="2022-08-23T10:08:33Z" finished-at="2022-08-23T10:08:40Z">
+  <suite name="Default suite" duration-ms="12583" started-at="2022-08-23T12:09:40Z" finished-at="2022-08-23T12:09:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7444" started-at="2022-08-23T10:08:33Z" finished-at="2022-08-23T10:08:40Z">
-      <class name="api.Topic03_Browser_Method_II">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:api.Topic03_Browser_Method_II@48eff760]" name="beforeTest" is-config="true" duration-ms="3517" started-at="2022-08-23T17:08:33Z" finished-at="2022-08-23T17:08:36Z">
+    <test name="Default test" duration-ms="12583" started-at="2022-08-23T12:09:40Z" finished-at="2022-08-23T12:09:52Z">
+      <class name="Practice.Topic03_Browser_Command">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:Practice.Topic03_Browser_Command@6d8a00e3]" name="beforeClass" is-config="true" duration-ms="3547" started-at="2022-08-23T19:09:40Z" finished-at="2022-08-23T19:09:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="f()[pri:0, instance:api.Topic03_Browser_Method_II@48eff760]" name="f" duration-ms="3465" started-at="2022-08-23T17:08:36Z" finished-at="2022-08-23T17:08:40Z">
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC03_Navigate_Function()[pri:0, instance:Practice.Topic03_Browser_Command@6d8a00e3]" name="TC03_Navigate_Function" duration-ms="8414" started-at="2022-08-23T19:09:43Z" finished-at="2022-08-23T19:09:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:api.Topic03_Browser_Method_II@48eff760]" name="afterTest" is-config="true" duration-ms="441" started-at="2022-08-23T17:08:40Z" finished-at="2022-08-23T17:08:40Z">
+        </test-method> <!-- TC03_Navigate_Function -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:Practice.Topic03_Browser_Command@6d8a00e3]" name="afterClass" is-config="true" duration-ms="607" started-at="2022-08-23T19:09:52Z" finished-at="2022-08-23T19:09:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- api.Topic03_Browser_Method_II -->
+        </test-method> <!-- afterClass -->
+      </class> <!-- Practice.Topic03_Browser_Command -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
