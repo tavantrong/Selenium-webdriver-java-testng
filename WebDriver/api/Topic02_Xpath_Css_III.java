@@ -30,7 +30,7 @@ public class Topic02_Xpath_Css_III {
 			//Xpath: //ol[@id='selectable']/li[1] - //ol[@id='selectable']/li[last()]
 			//CSS: li:first-child - li:last-child
 		//Sử dụng tham số Contains
-			//Xpath: //li[contains[@class,'ui-selected']
+			//Xpath: //li[contains(@class,'ui-selected')]
 			//CSS: li[class*='ui-selected']  - CSS ko áp dụng cho text được, chỉ sử dung cho attribute
 		//Sử dụng hàm Starts-with
 			//Xpath: //li[starts-with(@class='ui-state')]
