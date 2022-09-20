@@ -88,13 +88,14 @@ public class Topic05_Browser_Element_Part_I {
 	  
 	  //Lay ra ten the
 	  Element.getTagName(); //div / input...
+	  String emailtextboxTagname = Element.getTagName();
+	  driver.findElement(By.xpath("//" + emailtextboxTagname + "[@id='email']"));
 	  //Lay ra text cua 1 label / header / span / div /...
 	  Element.getText();
 	  
 	  //3. Kiem tra du lieu (is..) - Luu no vao 1 bien de kiem tra du lieu
 	  //Kiem tra bang nhau (Equal)
-	  String emailtextboxTagname = Element.getTagName();
-	  Assert.assertEquals(emailtextboxTagname, "input");
+	  	Assert.assertEquals(emailtextboxTagname, "input");
 	  //Kiem tra tinh dung sai (True / False)
 	    //Kiem tra element mong muon dang hien thi
 	  	Assert.assertTrue(Element.isDisplayed());
