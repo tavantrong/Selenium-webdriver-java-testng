@@ -17,6 +17,7 @@ public class Topic03_Browser_Command {
 	  public void beforeClass() {
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 	}
 	
 		
@@ -42,10 +43,11 @@ public class Topic03_Browser_Command {
 	}
 		
 	@Test
-	public void TC03_Navigate_Function() {
+	public void TC03_Navigate_Function() throws InterruptedException {
 		driver.get("http://live.techpanda.org/");
 		driver.findElement(By.xpath("//div[@class='footer']//a[text()='My Account']")).click();
 		driver.findElement(By.xpath("//span[text()='Create an Account']")).click();
+		Thread.sleep(5000);
 		Assert.assertEquals(driver.getCurrentUrl(), "http://live.techpanda.org/index.php/customer/account/create/");
 		
 		driver.navigate().back();
@@ -56,9 +58,10 @@ public class Topic03_Browser_Command {
 	}
 	
 	@Test
-	public void TC04_Get_PageSource() {
+	public void TC04_Get_PageSource() throws InterruptedException {
 		driver.get("http://live.techpanda.org/");
 		driver.findElement(By.xpath("//div[@class='footer']//a[text()='My Account']")).click();
+		Thread.sleep(3000);
 		Assert.assertTrue(driver.getPageSource().contains("Login or Create an Account"));
 		
 		driver.findElement(By.xpath("//span[text()='Create an Account']")).click();
