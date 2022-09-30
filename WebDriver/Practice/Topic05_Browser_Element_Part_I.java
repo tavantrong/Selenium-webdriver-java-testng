@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
-public class Topic05_Browser_Element {
+public class Topic05_Browser_Element_Part_I {
 	WebDriver driver;
 
 	@BeforeTest
