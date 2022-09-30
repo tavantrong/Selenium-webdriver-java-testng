@@ -20,7 +20,7 @@ public class Topic05_Browser_Element_Part_I {
   @BeforeTest
   public void beforeTest() {
 	  driver = new FirefoxDriver();
-	  	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  driver.manage().window().maximize();
   }
   
@@ -107,7 +107,15 @@ public class Topic05_Browser_Element_Part_I {
 	  //Da duoc chon thanh cong (Radio / Checkbox)
 	  Assert.assertTrue(Element.isSelected());
 	  
-	  	
+	  //Kiem tra co dieu kien - Dat sau phan assert
+	  boolean ElementNeedCheck = driver.findElement(By.cssSelector("#under_18")).isDisplayed();
+	  if (ElementNeedCheck) { //(ElementNeedCheck == true)
+		  driver.findElement(By.cssSelector("#under_18")).click();
+		  System.out.println("Age under 18 is displayed");
+		  }
+	  else {
+		  System.out.println("Age under 18 is NOT displayed");
+	  }
 	  	
 	 
 	  
