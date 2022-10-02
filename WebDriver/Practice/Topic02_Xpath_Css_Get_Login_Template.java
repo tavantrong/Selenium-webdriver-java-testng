@@ -11,7 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Xpath_Css_Get_Login_Template {
+public class Topic02_Xpath_Css_Get_Login_Template {
 	//Biến toàn cục
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
