@@ -47,7 +47,7 @@ public class Topic06_Textbox_TextArea_Part_I {
 		state = "California";
 		pin = "999666";
 		phone = "0244777777";
-		email = "automationkfc7@gmail.com";
+		email = "automationkfc8@gmail.com";
 		
 		editAddress = "06 hung Dinh - Thuan An";
 		editPhone = "0395453620";
@@ -59,7 +59,7 @@ public class Topic06_Textbox_TextArea_Part_I {
 		LoginURLpage = driver.getCurrentUrl();
 		
 		driver.findElement(By.xpath("//a[text()='here']")).click();
-		driver.findElement(By.xpath("//input[@name='emailid']")).sendKeys("automationkfc7@gmail.com");
+		driver.findElement(By.xpath("//input[@name='emailid']")).sendKeys("automationkfc8@gmail.com");
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
 		
 		//Get thong tin user & pass luu vao bien toan cuc
@@ -141,7 +141,7 @@ public class Topic06_Textbox_TextArea_Part_I {
 		driver.findElement(addressTextbox).sendKeys(editAddress);
 		Thread.sleep(3000);
 
-		driver.findElement(addressTextbox).clear();
+		driver.findElement(mobileTextbox).clear();
 		driver.findElement(mobileTextbox).sendKeys(editPhone);
 		Thread.sleep(3000);
 
