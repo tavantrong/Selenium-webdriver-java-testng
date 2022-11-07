@@ -74,10 +74,11 @@ public class Topic07_Custom_DropDown_Part_I {
 	//Angular 2.xx ko làm việc với Firefox bản cũ
 	//Hàm getText của Selenium không get dc giá trị bị ẩn - Trick: javascript
 		driver.get("https://tiemchungcovid19.gov.vn/portal/register-person");
-		selectItemInCustomDropdown("//ng-select[@formcontrolname='ordinalOfInjection']", "//span[@class='ng-option-label ng-star-inserted']", "Mũi tiêm thứ nhất");
+		selectItemInCustomDropdown("//ng-select[@formcontrolname='ordinalOfInjection']", "//span[@class='ng-option-label ng-star-inserted']", " Mũi tiêm thứ nhất ");
 		sleepInsecond(2);
-		Assert.assertEquals(driver.findElement(By.xpath("//ng-select[@formcontrolname='ordinalOfInjection']//input")), " Mũi tiêm thứ nhất ");
-		selectItemInCustomDropdown("//ng-select[@formcontrolname='ordinalOfInjection']", "//span[@class='ng-option-label ng-star-inserted']", "Mũi tiêm tiếp theo");
+		driver.findElement(By.xpath("//input[@class='form-control ng-pristine ng-invalid ng-touched']")).sendKeys("Ta Van Trong");
+		//Assert.assertEquals(driver.findElement(By.xpath("//ng-select[@formcontrolname='ordinalOfInjection']//input")), " Mũi tiêm thứ nhất ");
+		selectItemInCustomDropdown("//ng-select[@formcontrolname='ordinalOfInjection']", "//span[@class='ng-option-label ng-star-inserted']", " Mũi tiêm tiếp theo ");
 		sleepInsecond(2);
 
 
