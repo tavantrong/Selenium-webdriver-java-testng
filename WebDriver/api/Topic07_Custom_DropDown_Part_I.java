@@ -3,6 +3,8 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,6 +18,7 @@ public class Topic07_Custom_DropDown_Part_I {
 	//Biến toàn cục
 	WebDriver driver;
 	WebDriverWait explicitWait;
+	JavascriptExecutor jsExecutor;
 	
 	
 	@BeforeClass
@@ -23,8 +26,12 @@ public class Topic07_Custom_DropDown_Part_I {
 	public void beforeClass() {
 		System.setProperty("webdriver.chrome.driver", ".\\browserDrivers\\chromedriver.exe");
 		driver = new ChromeDriver();
+		
 		// Khai báo driver sau để lấy biến driver
 		explicitWait = new WebDriverWait(driver, 30);
+		
+		//Khai bao driver cua JavascriptExecutor
+		jsExecutor = (JavascriptExecutor) driver;
 		
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -69,19 +76,85 @@ public class Topic07_Custom_DropDown_Part_I {
 		sleepInsecond(4);
 	}
 
-	@Test
-	public void TC03_Angular() { // Chưa hoàn thành
+	public void TC03_Angular() {
 	//Angular 2.xx ko làm việc với Firefox bản cũ
-	//Hàm getText của Selenium không get dc giá trị bị ẩn - Trick: javascript
-		driver.get("https://tiemchungcovid19.gov.vn/portal/register-person");
-		selectItemInCustomDropdown("//ng-select[@formcontrolname='ordinalOfInjection']", "//span[@class='ng-option-label ng-star-inserted']", " Mũi tiêm thứ nhất ");
+	//Hàm getText của Selenium không get dc giá trị bị ẩn - Trick: Dùng javascript
+		driver.get("https://ej2.syncfusion.com/angular/demos/?_ga=2.262049992.437420821.1575083417-524628264.1575083417#/material/drop-down-list/data-binding");
+		selectItemInCustomDropdown("//ejs-dropdownlist[@id='games']", "//ul[@id='games_options']/li", "Basketball");
 		sleepInsecond(2);
-		driver.findElement(By.xpath("//input[@class='form-control ng-pristine ng-invalid ng-touched']")).sendKeys("Ta Van Trong");
-		//Assert.assertEquals(driver.findElement(By.xpath("//ng-select[@formcontrolname='ordinalOfInjection']//input")), " Mũi tiêm thứ nhất ");
-		selectItemInCustomDropdown("//ng-select[@formcontrolname='ordinalOfInjection']", "//span[@class='ng-option-label ng-star-inserted']", " Mũi tiêm tiếp theo ");
+		Assert.assertEquals(getAngularDropdownSelectedtext(), "Basketball");
+		selectItemInCustomDropdown("//ejs-dropdownlist[@id='games']", "//ul[@id='games_options']/li", "Snooker");
+		sleepInsecond(2);
+		selectItemInCustomDropdown("//ejs-dropdownlist[@id='games']", "//ul[@id='games_options']/li", "Football");
 		sleepInsecond(2);
 
-
+	}
+	
+	@Test(enabled = false)
+	public void TC04_React() {
+		driver.get("https://react.semantic-ui.com/maximize/dropdown-example-selection/");
+		selectItemInCustomDropdown("//div[@role='listbox']", "//div[@class='visible menu transition']//span", "Stevie Feliciano");
+		sleepInsecond(2);
+		Assert.assertEquals(driver.findElement(By.xpath("//div[@class='divider text']")).getText(), "Stevie Feliciano");
+		
+		selectItemInCustomDropdown("//div[@role='listbox']", "//div[@class='visible menu transition']//span", "Matt");
+		sleepInsecond(2);
+		Assert.assertEquals(driver.findElement(By.xpath("//div[@class='divider text']")).getText(), "Matt");
+		
+		selectItemInCustomDropdown("//div[@role='listbox']", "//div[@class='visible menu transition']//span", "Jenny Hess");
+		sleepInsecond(2);
+		Assert.assertEquals(driver.findElement(By.xpath("//div[@class='divider text']")).getText(), "Jenny Hess");
+	}
+	
+	@Test(enabled = false)
+	public void TC05_VueJS() {
+		driver.get("https://mikerodham.github.io/vue-dropdowns/");
+		selectItemInCustomDropdown("//li[@class='dropdown-toggle']", "//ul[@class='dropdown-menu']//a", "Second Option");
+		sleepInsecond(2);
+		Assert.assertEquals(driver.findElement(By.xpath("//li[@class='dropdown-toggle']")).getText(), "Second Option");
+		
+		selectItemInCustomDropdown("//li[@class='dropdown-toggle']", "//ul[@class='dropdown-menu']//a", "First Option");
+		sleepInsecond(2);
+		selectItemInCustomDropdown("//li[@class='dropdown-toggle']", "//ul[@class='dropdown-menu']//a", "Third Option");
+		sleepInsecond(2);
+	}
+	
+	@Test(enabled = false)
+	public void TC05_Editable_Dropdown() {
+		driver.get("https://react.semantic-ui.com/maximize/dropdown-example-search-selection/");
+		
+		selectItemInCustomDropdown("//div[@class='ui fluid search selection dropdown']", "//div[@class='visible menu transition']//span", "Aland Islands");
+		sleepInsecond(2);
+		Assert.assertEquals(driver.findElement(By.xpath("//div[@class='divider text']")).getText(), "Aland Islands");
+	}
+	
+	@Test
+	public void TC05_Editable_Tab_Key_2() {
+		driver.get("https://react.semantic-ui.com/maximize/dropdown-example-search-selection/");
+		selectItemEditDropdownbyTab2("//input[@type='text']", "Aland Islands");
+		sleepInsecond(2);
+		Assert.assertEquals(driver.findElement(By.xpath("//div[@class='divider text']")).getText(), "Aland Islands");
+	
+	}
+	
+	public void selectItemInEditDropdown(String parentXpass, String allItemXpath, String expectedText) {
+		driver.findElement(By.xpath(parentXpass)).clear();
+		driver.findElement(By.xpath(parentXpass)).sendKeys(expectedText);
+		sleepInsecond(2);
+		
+		List<WebElement> allItem = explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(allItemXpath)));
+		
+		//Dùng vòng lặp duyệt qua từng item - For each
+		for (WebElement item : allItem) {
+			if (item.getText().equals(expectedText)) {
+				item.click();
+				sleepInsecond(2);
+				break;
+	}}}
+	public void selectItemEditDropdownbyTab2(String parentXpass, String expectedText) {
+		driver.findElement(By.xpath(parentXpass)).sendKeys(expectedText);
+		sleepInsecond(2);
+		driver.findElement(By.xpath(parentXpass)).sendKeys(Keys.TAB);
 	}
 	
 	public void selectItemInCustomDropdown(String parentXpass, String allItemXpath, String expectedText) {
@@ -114,7 +187,10 @@ public class Topic07_Custom_DropDown_Part_I {
 			e.printStackTrace();
 		}
 	}
-	
+	public String getAngularDropdownSelectedtext() {
+		//Hàm chuyển từ Javascript về giá trị Selenium có thể hiểu được
+		return (String) jsExecutor.executeScript("return document.querySelector(\"select[name='games']>option[selected]\").text");
+	}
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
