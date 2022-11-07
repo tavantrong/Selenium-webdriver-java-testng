@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -21,7 +21,8 @@ public class Topic07_Custom_DropDown_Part_I {
 	@BeforeClass
 	//Hàm
 	public void beforeClass() {
-		driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", ".\\browserDrivers\\chromedriver.exe");
+		driver = new ChromeDriver();
 		// Khai báo driver sau để lấy biến driver
 		explicitWait = new WebDriverWait(driver, 30);
 		
@@ -58,7 +59,7 @@ public class Topic07_Custom_DropDown_Part_I {
 	  	- Kiểm tra xem chọn đúng chưa
 	 */
 	
-	@Test
+	@Test (enabled = false)
 	public void TC02_Nopcommerce() {
 		driver.get("https://demo.nopcommerce.com/register");
 		selectItemInCustomDropdown("//select[@name='DateOfBirthYear']", "//select[@name='DateOfBirthYear']//option", "1987");
@@ -68,7 +69,19 @@ public class Topic07_Custom_DropDown_Part_I {
 		sleepInsecond(4);
 	}
 
-	
+	@Test
+	public void TC03_Angular() { // Chưa hoàn thành
+	//Angular 2.xx ko làm việc với Firefox bản cũ
+	//Hàm getText của Selenium không get dc giá trị bị ẩn - Trick: javascript
+		driver.get("https://tiemchungcovid19.gov.vn/portal/register-person");
+		selectItemInCustomDropdown("//ng-select[@formcontrolname='ordinalOfInjection']", "//span[@class='ng-option-label ng-star-inserted']", "Mũi tiêm thứ nhất");
+		sleepInsecond(2);
+		Assert.assertEquals(driver.findElement(By.xpath("//ng-select[@formcontrolname='ordinalOfInjection']//input")), " Mũi tiêm thứ nhất ");
+		selectItemInCustomDropdown("//ng-select[@formcontrolname='ordinalOfInjection']", "//span[@class='ng-option-label ng-star-inserted']", "Mũi tiêm tiếp theo");
+		sleepInsecond(2);
+
+
+	}
 	
 	public void selectItemInCustomDropdown(String parentXpass, String allItemXpath, String expectedText) {
 		// Click vào Dropdown
@@ -97,7 +110,6 @@ public class Topic07_Custom_DropDown_Part_I {
 		try {
 			Thread.sleep(timeout * 1000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
