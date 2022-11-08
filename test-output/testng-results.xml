@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10342" started-at="2022-11-07T15:50:58Z" finished-at="2022-11-07T15:51:09Z">
+  <suite name="Default suite" duration-ms="29011" started-at="2022-11-08T03:34:26Z" finished-at="2022-11-08T03:34:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10342" started-at="2022-11-07T15:50:58Z" finished-at="2022-11-07T15:51:09Z">
-      <class name="api.Topic07_Custom_DropDown_Part_I">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:api.Topic07_Custom_DropDown_Part_I@573f2bb1]" name="beforeClass" is-config="true" duration-ms="2397" started-at="2022-11-07T22:50:58Z" finished-at="2022-11-07T22:51:01Z">
+    <test name="Default test" duration-ms="29011" started-at="2022-11-08T03:34:26Z" finished-at="2022-11-08T03:34:55Z">
+      <class name="api.Topic07_Custom_DropDown_Part_II">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:api.Topic07_Custom_DropDown_Part_II@573f2bb1]" name="beforeClass" is-config="true" duration-ms="2287" started-at="2022-11-08T10:34:26Z" finished-at="2022-11-08T10:34:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TC05_Editable_Tab_Key_2()[pri:0, instance:api.Topic07_Custom_DropDown_Part_I@573f2bb1]" name="TC05_Editable_Tab_Key_2" duration-ms="6536" started-at="2022-11-07T22:51:01Z" finished-at="2022-11-07T22:51:07Z">
+        <test-method status="PASS" signature="TC06_multiSelectDropdown()[pri:0, instance:api.Topic07_Custom_DropDown_Part_II@573f2bb1]" name="TC06_multiSelectDropdown" duration-ms="25802" started-at="2022-11-08T10:34:28Z" finished-at="2022-11-08T10:34:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC05_Editable_Tab_Key_2 -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:api.Topic07_Custom_DropDown_Part_I@573f2bb1]" name="afterClass" is-config="true" duration-ms="1394" started-at="2022-11-07T22:51:07Z" finished-at="2022-11-07T22:51:09Z">
+        </test-method> <!-- TC06_multiSelectDropdown -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:api.Topic07_Custom_DropDown_Part_II@573f2bb1]" name="afterClass" is-config="true" duration-ms="910" started-at="2022-11-08T10:34:54Z" finished-at="2022-11-08T10:34:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- api.Topic07_Custom_DropDown_Part_I -->
+      </class> <!-- api.Topic07_Custom_DropDown_Part_II -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
