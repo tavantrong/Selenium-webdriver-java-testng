@@ -12,7 +12,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Topic07_Custom_DropDown_Part_II {
+public class Topic08_Custom_DropDown_Part_II {
 	//Biến toàn cục
 	WebDriver driver;
 	WebDriverWait explicitWait;
