@@ -2,6 +2,8 @@ package api;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
+
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
@@ -86,7 +88,7 @@ public class Topic10_Alert {
 	  // Sử dụng HTML encode để phiên dịch kí tự đặc biệt : P%40sswo%21d (https://www.w3schools.com/tags/ref_urlencode.ASP)
 	  
   }
-  @Test
+  @Test(enabled = false)
   public void TC05_Authentication_Alert_Custom() {
   driver.get("https://the-internet.herokuapp.com/");
   sleepInsecond(3);
@@ -95,7 +97,21 @@ public class Topic10_Alert {
   driver.get(getCredentialToUrl(url, "admin", "admin"));
   Assert.assertTrue(driver.findElement(By.xpath("//p[contains(text(),'Congratulations! You must have the proper credentials.')]")).isDisplayed(), "Congratulations! You must have the proper credentials.");
 
+  }
   
+  
+  @Test
+  public void TC06_AutoIT_Alert() throws IOException {
+	  //AutoIT chi work tren Windows
+	  String proJectPath = System.getProperty("user.dir");
+	  String autoITScriptPath = proJectPath + "\\autoIT\\authen_firefox.exe";
+	  
+	  Runtime.getRuntime().exec(new String[] {autoITScriptPath, "admin", "admin"});
+	  
+	  driver.get("http://the-internet.herokuapp.com/basic_auth");
+	  sleepInsecond(2);
+	  Assert.assertTrue(driver.findElement(By.xpath("//p[contains(text(),'Congratulations! You must have the proper credentials.')]")).isDisplayed(), "Congratulations! You must have the proper credentials.");
+	 
   }
   
   
