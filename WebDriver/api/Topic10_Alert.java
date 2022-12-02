@@ -108,7 +108,7 @@ public class Topic10_Alert {
 	  
 	  Runtime.getRuntime().exec(new String[] {autoITScriptPath, "admin", "admin"});
 	  
-	  driver.get("http://the-internet.herokuapp.com/basic_auth");
+	  driver.get("http://he-internet.herokuapp.com/basic_auth");
 	  sleepInsecond(2);
 	  Assert.assertTrue(driver.findElement(By.xpath("//p[contains(text(),'Congratulations! You must have the proper credentials.')]")).isDisplayed(), "Congratulations! You must have the proper credentials.");
 	 
