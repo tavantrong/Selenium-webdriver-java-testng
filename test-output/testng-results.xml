@@ -1,25 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17561" started-at="2022-12-03T05:37:55Z" finished-at="2022-12-03T05:38:13Z">
+  <suite name="Default suite" duration-ms="26500" started-at="2022-12-03T16:52:01Z" finished-at="2022-12-03T16:52:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17561" started-at="2022-12-03T05:37:55Z" finished-at="2022-12-03T05:38:13Z">
-      <class name="api.Topic11_User_Interaction_Part_II">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:api.Topic11_User_Interaction_Part_II@48eff760]" name="beforeTest" is-config="true" duration-ms="3613" started-at="2022-12-03T12:37:55Z" finished-at="2022-12-03T12:37:59Z">
+    <test name="Default test" duration-ms="26500" started-at="2022-12-03T16:52:01Z" finished-at="2022-12-03T16:52:28Z">
+      <class name="api.Topic12_Popup">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:api.Topic12_Popup@48eff760]" name="beforeTest" is-config="true" duration-ms="2205" started-at="2022-12-03T23:52:01Z" finished-at="2022-12-03T23:52:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="TC03_Drag_Drop_HTML5_Xpath()[pri:0, instance:api.Topic11_User_Interaction_Part_II@48eff760]" name="TC03_Drag_Drop_HTML5_Xpath" duration-ms="13538" started-at="2022-12-03T12:37:59Z" finished-at="2022-12-03T12:38:12Z">
+        <test-method status="FAIL" signature="TC04_Popup_in_DOM_ConditionorRandom()[pri:0, instance:api.Topic12_Popup@48eff760]" name="TC04_Popup_in_DOM_ConditionorRandom" duration-ms="23414" started-at="2022-12-03T23:52:04Z" finished-at="2022-12-03T23:52:27Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='mailch-wrap']"}
+  (Session info: chrome=108.0.5359.94)
+  (Driver info: chromedriver=107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'DESKTOP-KFK5AMQ', ip: '192.168.1.184', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:51341}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}), userDataDir=C:\Users\tavan\AppData\Local\Temp\scoped_dir11692_852499126}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=108.0.5359.94, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: d54722f8ddaf001a0b23c4a45be90ea1
+*** Element info: {Using=xpath, value=//div[@class='mailch-wrap']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='mailch-wrap']"}
+  (Session info: chrome=108.0.5359.94)
+  (Driver info: chromedriver=107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'DESKTOP-KFK5AMQ', ip: '192.168.1.184', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:51341}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}), userDataDir=C:\Users\tavan\AppData\Local\Temp\scoped_dir11692_852499126}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=108.0.5359.94, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: d54722f8ddaf001a0b23c4a45be90ea1
+*** Element info: {Using=xpath, value=//div[@class='mailch-wrap']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at api.Topic12_Popup.TC04_Popup_in_DOM_ConditionorRandom(Topic12_Popup.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC03_Drag_Drop_HTML5_Xpath -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:api.Topic11_User_Interaction_Part_II@48eff760]" name="afterTest" is-config="true" duration-ms="396" started-at="2022-12-03T12:38:12Z" finished-at="2022-12-03T12:38:13Z">
+        </test-method> <!-- TC04_Popup_in_DOM_ConditionorRandom -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:api.Topic12_Popup@48eff760]" name="afterTest" is-config="true" duration-ms="862" started-at="2022-12-03T23:52:27Z" finished-at="2022-12-03T23:52:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- api.Topic11_User_Interaction_Part_II -->
+      </class> <!-- api.Topic12_Popup -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

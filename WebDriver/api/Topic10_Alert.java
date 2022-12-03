@@ -34,9 +34,9 @@ public class Topic10_Alert {
 	  driver.get("https://automationfc.github.io/basic-form/");
 	  driver.findElement(By.xpath("//button[text()='Click for JS Alert']")).click();
 	  
-	  //Chờ Alert xuất hiện
+	  //2 nhiem vu: Chờ Alert xuất hiện + switch to alert - on dinh hon
 	  explicitWait.until(ExpectedConditions.alertIsPresent());
-	  //Sau khi xuất hiện thì..switch to alert
+	  //1 nhiem vu: switch to alert
 	  alert = driver.switchTo().alert();
 	  //Hoặc alert = explicitWait.until(ExpectedConditions.alertIsPresent());
 	  //Verify

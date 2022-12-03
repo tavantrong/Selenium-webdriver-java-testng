@@ -16,6 +16,7 @@ public void TC01_Run_on_firefox() {
 	
 	//Firefox ver 48 + Selenium 3.x.x + Geckogriver
 	System.setProperty("webdriver.gecko.driver", "//path_of_geckodriver");
+	//Sau do set driver = new FirefoxDriver();
 	driver.get("https://www.google.com.vn/");
 	driver.quit();
 	
