@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8672" started-at="2022-12-02T16:51:55Z" finished-at="2022-12-02T16:52:03Z">
+  <suite name="Default suite" duration-ms="17561" started-at="2022-12-03T05:37:55Z" finished-at="2022-12-03T05:38:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8672" started-at="2022-12-02T16:51:55Z" finished-at="2022-12-02T16:52:03Z">
-      <class name="api.Topic11_User_Interaction_Part_I">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:api.Topic11_User_Interaction_Part_I@48eff760]" name="beforeTest" is-config="true" duration-ms="3630" started-at="2022-12-02T23:51:55Z" finished-at="2022-12-02T23:51:58Z">
+    <test name="Default test" duration-ms="17561" started-at="2022-12-03T05:37:55Z" finished-at="2022-12-03T05:38:13Z">
+      <class name="api.Topic11_User_Interaction_Part_II">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:api.Topic11_User_Interaction_Part_II@48eff760]" name="beforeTest" is-config="true" duration-ms="3613" started-at="2022-12-03T12:37:55Z" finished-at="2022-12-03T12:37:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="TC05_DoubleClick()[pri:0, instance:api.Topic11_User_Interaction_Part_I@48eff760]" name="TC05_DoubleClick" duration-ms="4607" started-at="2022-12-02T23:51:58Z" finished-at="2022-12-02T23:52:03Z">
+        <test-method status="PASS" signature="TC03_Drag_Drop_HTML5_Xpath()[pri:0, instance:api.Topic11_User_Interaction_Part_II@48eff760]" name="TC03_Drag_Drop_HTML5_Xpath" duration-ms="13538" started-at="2022-12-03T12:37:59Z" finished-at="2022-12-03T12:38:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC05_DoubleClick -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:api.Topic11_User_Interaction_Part_I@48eff760]" name="afterTest" is-config="true" duration-ms="421" started-at="2022-12-02T23:52:03Z" finished-at="2022-12-02T23:52:03Z">
+        </test-method> <!-- TC03_Drag_Drop_HTML5_Xpath -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:api.Topic11_User_Interaction_Part_II@48eff760]" name="afterTest" is-config="true" duration-ms="396" started-at="2022-12-03T12:38:12Z" finished-at="2022-12-03T12:38:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- api.Topic11_User_Interaction_Part_I -->
+      </class> <!-- api.Topic11_User_Interaction_Part_II -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
