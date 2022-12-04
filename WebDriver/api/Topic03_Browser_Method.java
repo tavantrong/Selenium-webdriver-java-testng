@@ -31,7 +31,7 @@ public void TC02_Run_on_Chrome() {
 	//System.setProperty("webdriver.chrome.driver", ".\\browserDrivers\\chromedriver.exe");
 	//. - Đại diện cho project location
 	
-	//Set driver - Dùng cho nhiều máy (Sử dụng biến set sẵn)
+	//Set driver - Dùng cho nhiều máy (Sử dụng biến set sẵn "projectLocation")
 	System.setProperty("webdriver.chrome.driver", projectLocation + "\\browserDrivers\\chromedriver.exe");
 
 	driver = new ChromeDriver();

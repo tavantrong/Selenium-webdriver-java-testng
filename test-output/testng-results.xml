@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11055" started-at="2022-12-04T05:28:31Z" finished-at="2022-12-04T05:28:42Z">
+  <suite name="Default suite" duration-ms="22076" started-at="2022-12-04T16:20:37Z" finished-at="2022-12-04T16:20:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11055" started-at="2022-12-04T05:28:31Z" finished-at="2022-12-04T05:28:42Z">
-      <class name="api.Topic12_Popup">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:api.Topic12_Popup@48eff760]" name="beforeTest" is-config="true" duration-ms="2186" started-at="2022-12-04T12:28:31Z" finished-at="2022-12-04T12:28:33Z">
+    <test name="Default test" duration-ms="22076" started-at="2022-12-04T16:20:37Z" finished-at="2022-12-04T16:20:59Z">
+      <class name="api.Topic13_Frame_Iframe">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:api.Topic13_Frame_Iframe@48eff760]" name="beforeTest" is-config="true" duration-ms="2181" started-at="2022-12-04T23:20:37Z" finished-at="2022-12-04T23:20:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="TC04_Popup_in_DOM_ConditionorRandom()[pri:0, instance:api.Topic12_Popup@48eff760]" name="TC04_Popup_in_DOM_ConditionorRandom" duration-ms="7970" started-at="2022-12-04T12:28:33Z" finished-at="2022-12-04T12:28:41Z">
+        <test-method status="PASS" signature="TC01_Iframe()[pri:0, instance:api.Topic13_Frame_Iframe@48eff760]" name="TC01_Iframe" duration-ms="18732" started-at="2022-12-04T23:20:39Z" finished-at="2022-12-04T23:20:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC04_Popup_in_DOM_ConditionorRandom -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:api.Topic12_Popup@48eff760]" name="afterTest" is-config="true" duration-ms="887" started-at="2022-12-04T12:28:41Z" finished-at="2022-12-04T12:28:42Z">
+        </test-method> <!-- TC01_Iframe -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:api.Topic13_Frame_Iframe@48eff760]" name="afterTest" is-config="true" duration-ms="1149" started-at="2022-12-04T23:20:58Z" finished-at="2022-12-04T23:20:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- api.Topic12_Popup -->
+      </class> <!-- api.Topic13_Frame_Iframe -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
