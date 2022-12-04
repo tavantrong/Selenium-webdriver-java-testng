@@ -68,29 +68,29 @@ public class Topic12_Popup {
   @Test
   public void TC04_Popup_in_DOM_ConditionorRandom() {
 	  System.out.println("Step 1");
-	  driver.get("https://blog.testproject.io/");
+	  driver.get("https://bangbang.cmn.vn/trang-chu.html");
 	  
 	  // 1 - Nếu popup xuất hiện --> Step 2: Close --> Step 3
 	  // 2 - Nếu popup ko xuất hiện --> qua Step 3
 	  
 	  //Có hoặc ko xuất hiện đều ở trong DOM
-	  if (driver.findElement(By.xpath("//div[@class='mailch-wrap']")).isDisplayed()) {
+	  if (driver.findElement(By.xpath("//div[@class='popup-kulcard']")).isDisplayed()) {
 		  System.out.println("Step 2");
-		  driver.findElement(By.xpath("//div[@id='close-mailch']")).click();
+		  driver.findElement(By.xpath("//a[@class='popup-kulcard-close close']")).click();
 		  sleepInsecond(3);
 		  
 	  }
 	  
 	  // Có xuất hiện có trong DOM
 	  // Chưa xuất hiện thì ko có trong DOM
-	  if (driver.findElements(By.xpath("//div[@class='mailch-wrap']")).size() >=1) {
-		  System.out.println("Step 2");
-		  driver.findElement(By.xpath("//div[@id='close-mailch']")).click();
-		  sleepInsecond(3);
-	  }
+	  //if (driver.findElements(By.xpath("//div[@class='popup-kulcard']")).size() >=1) {
+		//  System.out.println("Step 2");
+		//  driver.findElement(By.xpath("//a[@class='popup-kulcard-close close']")).click();
+		//  sleepInsecond(3);
+	 // }
 	  
 	  System.out.println("Step 3");
-	  driver.findElement(By.xpath("//section[@id='search-2']//input[@class='search-field']")).sendKeys("Mothaiba");
+	  driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Mothaiba");
 	  sleepInsecond(3);
 	  
   }
