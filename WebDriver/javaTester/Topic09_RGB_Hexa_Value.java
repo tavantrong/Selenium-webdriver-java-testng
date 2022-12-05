@@ -2,7 +2,7 @@ package javaTester;
 
 import org.openqa.selenium.support.Color;
 
-public class Top09_RGB_Hexa_Value {
+public class Topic09_RGB_Hexa_Value {
 
 	public static void main(String[] args) {
 		//Lay ra gia tri RGB
