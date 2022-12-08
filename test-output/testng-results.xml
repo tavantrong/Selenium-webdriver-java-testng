@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22076" started-at="2022-12-04T16:20:37Z" finished-at="2022-12-04T16:20:59Z">
+  <suite name="Default suite" duration-ms="19027" started-at="2022-12-08T16:02:24Z" finished-at="2022-12-08T16:02:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22076" started-at="2022-12-04T16:20:37Z" finished-at="2022-12-04T16:20:59Z">
-      <class name="api.Topic13_Frame_Iframe">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:api.Topic13_Frame_Iframe@48eff760]" name="beforeTest" is-config="true" duration-ms="2181" started-at="2022-12-04T23:20:37Z" finished-at="2022-12-04T23:20:39Z">
+    <test name="Default test" duration-ms="19027" started-at="2022-12-08T16:02:24Z" finished-at="2022-12-08T16:02:43Z">
+      <class name="api.Topic14_Window_Tab">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:api.Topic14_Window_Tab@48eff760]" name="beforeClass" is-config="true" duration-ms="2174" started-at="2022-12-08T23:02:24Z" finished-at="2022-12-08T23:02:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="TC01_Iframe()[pri:0, instance:api.Topic13_Frame_Iframe@48eff760]" name="TC01_Iframe" duration-ms="18732" started-at="2022-12-04T23:20:39Z" finished-at="2022-12-04T23:20:58Z">
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC_02_More_Than_Two_Window_or_Tab()[pri:0, instance:api.Topic14_Window_Tab@48eff760]" name="TC_02_More_Than_Two_Window_or_Tab" duration-ms="15878" started-at="2022-12-08T23:02:26Z" finished-at="2022-12-08T23:02:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC01_Iframe -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:api.Topic13_Frame_Iframe@48eff760]" name="afterTest" is-config="true" duration-ms="1149" started-at="2022-12-04T23:20:58Z" finished-at="2022-12-04T23:20:59Z">
+        </test-method> <!-- TC_02_More_Than_Two_Window_or_Tab -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:api.Topic14_Window_Tab@48eff760]" name="afterClass" is-config="true" duration-ms="963" started-at="2022-12-08T23:02:42Z" finished-at="2022-12-08T23:02:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- api.Topic13_Frame_Iframe -->
+        </test-method> <!-- afterClass -->
+      </class> <!-- api.Topic14_Window_Tab -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

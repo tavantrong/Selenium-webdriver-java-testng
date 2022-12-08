@@ -61,6 +61,36 @@ public class Topic14_Window_Tab {
 	
 	@Test
 	public void TC_02_More_Than_Two_Window_or_Tab() {
+		driver.get("https://kyna.vn/");
+		String kynaID = driver.getWindowHandle();
+		
+		//Click vao Facebook at footer
+		driver.findElement(By.xpath("//div[@class='social']//img[@alt='facebook']")).click();
+		
+		//Switch to Facebook
+		swithToWindowByTitle("Kyna.vn | Facebook");
+		Assert.assertTrue(driver.getCurrentUrl().contains("facebook.com"));
+		
+		//Switch ve trang Kyna
+		swithToWindowByTitle("Kyna.vn - Học online cùng chuyên gia");
+		Assert.assertTrue(driver.getCurrentUrl().contains("skills.kynaenglish.vn"));
+		
+		//Click vao youtube
+		driver.findElement(By.xpath("//div[@id='k-footer']//img[@alt='youtube']")).click();
+		
+		//Switch vao trang Youtube
+		swithToWindowByTitle("Kyna.vn - YouTube");
+		Assert.assertTrue(driver.getCurrentUrl().contains("youtube.com"));
+		
+		//Switch ve trang Kyna (*)
+		swithToWindowByTitle("Kyna.vn - Học online cùng chuyên gia");
+		Assert.assertTrue(driver.getCurrentUrl().contains("skills.kynaenglish.vn"));
+		
+		//Close all tab without kyna
+		closeAllWindowWithoutParent(kynaID);
+		sleepInsecond(3);
+		
+
 		
 	}
 	
@@ -90,6 +120,21 @@ public class Topic14_Window_Tab {
 				break;
 			}}}
 	
+	public void closeAllWindowWithoutParent (String windowID) {
+		Set<String> allIDs = driver.getWindowHandles();
+		
+		for (String id : allIDs) {
+			if (!id.equals(windowID)) {
+				driver.switchTo().window(id);
+				driver.close();				
+			}}}
+	
+	  public void sleepInsecond(long timeout) {
+			try {
+				Thread.sleep(timeout * 1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}}
 	
 	@AfterClass
 	public void afterClass() {
