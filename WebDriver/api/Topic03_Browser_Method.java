@@ -14,7 +14,8 @@ public void TC01_Run_on_firefox() {
 	//Firefox ver 47 + Selenium 2.x.x + Không dùng Geckogriver
 	driver = new FirefoxDriver();
 	
-	//Firefox ver 48 + Selenium 3.x.x + Geckogriver
+	//Firefox ver 48 or mới nhất + Selenium 3.141.59 + Geckogriver tương ứng
+	//TestNG thư viện (ko phải là TestNG Plugin)
 	System.setProperty("webdriver.gecko.driver", "//path_of_geckodriver");
 	//Sau do set driver = new FirefoxDriver();
 	driver.get("https://www.google.com.vn/");
