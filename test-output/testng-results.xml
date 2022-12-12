@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19027" started-at="2022-12-08T16:02:24Z" finished-at="2022-12-08T16:02:43Z">
+  <suite name="Default suite" duration-ms="23106" started-at="2022-12-12T03:13:13Z" finished-at="2022-12-12T03:13:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19027" started-at="2022-12-08T16:02:24Z" finished-at="2022-12-08T16:02:43Z">
-      <class name="api.Topic14_Window_Tab">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:api.Topic14_Window_Tab@48eff760]" name="beforeClass" is-config="true" duration-ms="2174" started-at="2022-12-08T23:02:24Z" finished-at="2022-12-08T23:02:26Z">
+    <test name="Default test" duration-ms="23106" started-at="2022-12-12T03:13:13Z" finished-at="2022-12-12T03:13:36Z">
+      <class name="api.Topic15_Javascript_Executor">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:api.Topic15_Javascript_Executor@6d8a00e3]" name="beforeClass" is-config="true" duration-ms="2189" started-at="2022-12-12T10:13:13Z" finished-at="2022-12-12T10:13:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TC_02_More_Than_Two_Window_or_Tab()[pri:0, instance:api.Topic14_Window_Tab@48eff760]" name="TC_02_More_Than_Two_Window_or_Tab" duration-ms="15878" started-at="2022-12-08T23:02:26Z" finished-at="2022-12-08T23:02:42Z">
+        <test-method status="PASS" signature="TC_03_Remove_attribute()[pri:0, instance:api.Topic15_Javascript_Executor@6d8a00e3]" name="TC_03_Remove_attribute" duration-ms="20044" started-at="2022-12-12T10:13:15Z" finished-at="2022-12-12T10:13:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_02_More_Than_Two_Window_or_Tab -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:api.Topic14_Window_Tab@48eff760]" name="afterClass" is-config="true" duration-ms="963" started-at="2022-12-08T23:02:42Z" finished-at="2022-12-08T23:02:43Z">
+        </test-method> <!-- TC_03_Remove_attribute -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:api.Topic15_Javascript_Executor@6d8a00e3]" name="afterClass" is-config="true" duration-ms="860" started-at="2022-12-12T10:13:35Z" finished-at="2022-12-12T10:13:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- api.Topic14_Window_Tab -->
+      </class> <!-- api.Topic15_Javascript_Executor -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
