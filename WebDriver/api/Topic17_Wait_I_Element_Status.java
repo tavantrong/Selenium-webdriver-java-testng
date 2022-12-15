@@ -59,7 +59,8 @@ public class Topic17_Wait_I_Element_Status {
 	
 	@Test
 	public void TC_04_Staleness() {
-		
+		// 3. Element không có trên UI, ko có trong DOM (bắt buộc)
+		// Dựa vào điều kiện mới xuất hiện
 	}
 
 	@AfterClass
