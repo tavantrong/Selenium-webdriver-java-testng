@@ -2,6 +2,7 @@ package api;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,7 +17,7 @@ public class Topic17_Wait_I_Element_Status {
 	@BeforeClass
 	//Hàm
 	public void beforeClass() {
-		System.setProperty("webdriver.chrome.driver", ".\\browserDrivers\\geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", ".\\browserDrivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 		explicitWait = new WebDriverWait(driver, 15);
 		driver.manage().window().maximize();
@@ -58,6 +59,16 @@ public class Topic17_Wait_I_Element_Status {
 	public void TC_04_Staleness() {
 		// 3. Element không có trên UI, ko có trong DOM (bắt buộc)
 		// Dựa vào điều kiện mới xuất hiện
+		driver.get("http://automationpractice.com/cgi-sys/suspendedpage.cgi?controller=authentication&back=my-account");
+		driver.findElement(By.xpath("//button[@id='SubmitLogin']")).click();
+		//Sau khi Click - Error message xuất hiện - lưu vào 1 biến
+		WebElement errorMessage = driver.findElement(By.xpath("//li[text()='An email address required.']"));
+		
+		//Sau vài thao tác ko xuất hiện trong DOM / thay đổi trạng thái (HTML cập nhật)
+		driver.navigate().refresh();
+		
+		// Wait cho 1 element staleness -> Đúng
+		explicitWait.until(ExpectedConditions.stalenessOf(errorMessage));  // == Pass
 	}
 
 	@AfterClass
