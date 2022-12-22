@@ -1,8 +1,6 @@
 package api;
 import org.testng.annotations.Test;
 
-import com.thoughtworks.selenium.condition.Condition;
-
 import java.util.Date;
 
 import org.openqa.selenium.By;
