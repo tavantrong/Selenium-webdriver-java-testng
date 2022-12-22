@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-public class Topic17_Wait_II_Element_Status {
+public class Topic17_Wait_II_Find_Element {
 	//Biến toàn cục
 	WebDriver driver;
 
@@ -22,6 +22,9 @@ public class Topic17_Wait_II_Element_Status {
 		driver = new ChromeDriver();
 		driver.get("https://www.facebook.com/");
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		//Implicit wait - Wait cho hàm findElement/findElements tìm thấy element
+		//Thấy - Step tiếp theo
+		//Ko thấy - 0.5s tìm lại 1 lần - Hết timeout throw exception
 		driver.manage().window().maximize();
 		
 		}

@@ -1,77 +1,75 @@
 package api;
 import org.testng.annotations.Test;
 
+import com.thoughtworks.selenium.condition.Condition;
+
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-public class Topic17_Wait_III_Element_Status {
-	//Biến toàn cục
+public class Topic17_Wait_V_Explicit {
+	// Static wait - Wait được sét cứng - Bắt buộc chờ hết time out - Step tiếp theo
 	WebDriver driver;
+	WebDriverWait explicitWait;
 
 	@BeforeClass
 	public void beforeClass() {
 		System.setProperty("webdriver.chrome.driver", ".\\browserDrivers\\chromedriver.exe");
+		explicitWait = new WebDriverWait(driver, 15);
+		//Explicit wait là thư viện Java Thread (not Selenium) linh động với 2 case:
+			// 1 - Wait 1 or nhiều Element đến khi hiển thị (visible) - Thấy - Step tiếp
+			// 2 - Wait 1 or nhiều Element đến khi biến mất (invisible) - Biến mất - Step tiếp 
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
 		}
 
-	
-	public void TC_01_Dont_Set_Implicit() {
-		driver.get("https://juliemr.github.io/protractor-demo/");
-		driver.findElement(By.xpath("//input[@ng-model='first']")).sendKeys("5");
-		driver.findElement(By.xpath("//input[@ng-model='second']")).sendKeys("6");
-		driver.findElement(By.id("gobutton")).click();
-		
-		Assert.assertEquals(driver.findElement(By.xpath("//h2[@class='ng-binding']")).getText(), "11");
-		// Failed - expected [11] but found [.] - Do element loading hiện chưa đầy đủ
-		
-	}
-
-	
-	public void TC_02_Invalid_Locator() {
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		
-		driver.get("https://juliemr.github.io/protractor-demo/");
-		driver.findElement(By.xpath("//input[@ng-model='first']")).sendKeys("5");
-		driver.findElement(By.xpath("//input[@ng-model='second']")).sendKeys("6");
-		driver.findElement(By.id("gobutton")).click();
-		
-		Assert.assertEquals(driver.findElement(By.xpath("//h2[@class='ng-binding']")).getText(), "11");
-		//Failed - Tìm được và lấy giá trị ngay thời điểm thấy nhưng không đúng (sai Locator)
-	}
-	
-	public void TC_03_Valid_Locator() {
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		
-		driver.get("https://juliemr.github.io/protractor-demo/");
-		driver.findElement(By.xpath("//input[@ng-model='first']")).sendKeys("5");
-		driver.findElement(By.xpath("//input[@ng-model='second']")).sendKeys("6");
-		driver.findElement(By.id("gobutton")).click();
-		
-		Assert.assertEquals(driver.findElement(By.xpath("//h2[@class='ng-binding' and text()='11']")).getText(), "11");
-		// Pass - Sau khi click - chờ đúng giá trị Element Xpath - Qua step tiếp theo
-	}
 	@Test
-	public void TC_04_Valid_Locator_But_Invalid_Implicit() {
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-		
+	public void TC_01_Enough_Time() {
 		driver.get("https://juliemr.github.io/protractor-demo/");
 		driver.findElement(By.xpath("//input[@ng-model='first']")).sendKeys("5");
 		driver.findElement(By.xpath("//input[@ng-model='second']")).sendKeys("6");
 		driver.findElement(By.id("gobutton")).click();
 		
-		Assert.assertEquals(driver.findElement(By.xpath("//h2[@class='ng-binding' and text()='11']")).getText(), "11");
-		//Failed - 1s timeout không đủ để hiện Element xpath (tối đa 2-3s) 
+		// Chờ cho đến khi Xpath element hiển thị, trong vòng 2s
+		explicitWait = new WebDriverWait(driver, 2);
+		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[@text()='11']")));
+		Assert.assertEquals(driver.findElement(By.xpath("//h2[@class='ng-binding']")).getText(), "11");
 	}
 
+	
+	public void TC_02_Less_Time() {
+		driver.get("https://juliemr.github.io/protractor-demo/");
+		driver.findElement(By.xpath("//input[@ng-model='first']")).sendKeys("5");
+		driver.findElement(By.xpath("//input[@ng-model='second']")).sendKeys("6");
+		driver.findElement(By.id("gobutton")).click();
+		
+		// Chờ cho đến khi Xpath element hiển thị, trong vòng 1s
+		explicitWait = new WebDriverWait(driver, 1);
+		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[@text()='11']")));
+		Assert.assertEquals(driver.findElement(By.xpath("//h2[@class='ng-binding']")).getText(), "11");
+		// Failed
+	}
+	
+	public void TC_03_Greater_Time() {
+		driver.get("https://juliemr.github.io/protractor-demo/");
+		driver.findElement(By.xpath("//input[@ng-model='first']")).sendKeys("5");
+		driver.findElement(By.xpath("//input[@ng-model='second']")).sendKeys("6");
+		driver.findElement(By.id("gobutton")).click();
+		
+		// Chờ cho đến khi Xpath element hiển thị, trong vòng 10s
+		explicitWait = new WebDriverWait(driver, 10);
+		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[@text()='11']")));
+		Assert.assertEquals(driver.findElement(By.xpath("//h2[@class='ng-binding']")).getText(), "11");
+	}
+	
 
 	
 	
@@ -81,6 +79,7 @@ public class Topic17_Wait_III_Element_Status {
 		return date.toString();
 	}
 	
+		
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
