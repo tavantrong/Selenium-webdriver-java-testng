@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23106" started-at="2022-12-12T03:13:13Z" finished-at="2022-12-12T03:13:36Z">
+  <suite name="Default suite" duration-ms="55980" started-at="2022-12-23T12:44:57Z" finished-at="2022-12-23T12:45:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23106" started-at="2022-12-12T03:13:13Z" finished-at="2022-12-12T03:13:36Z">
-      <class name="api.Topic15_Javascript_Executor">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:api.Topic15_Javascript_Executor@6d8a00e3]" name="beforeClass" is-config="true" duration-ms="2189" started-at="2022-12-12T10:13:13Z" finished-at="2022-12-12T10:13:15Z">
+    <test name="Default test" duration-ms="55980" started-at="2022-12-23T12:44:57Z" finished-at="2022-12-23T12:45:53Z">
+      <class name="api.Topic17_Wait_VI_Explicit_Exercise">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:api.Topic17_Wait_VI_Explicit_Exercise@573f2bb1]" name="beforeClass" is-config="true" duration-ms="2261" started-at="2022-12-23T19:44:57Z" finished-at="2022-12-23T19:45:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TC_03_Remove_attribute()[pri:0, instance:api.Topic15_Javascript_Executor@6d8a00e3]" name="TC_03_Remove_attribute" duration-ms="20044" started-at="2022-12-12T10:13:15Z" finished-at="2022-12-12T10:13:35Z">
+        <test-method status="PASS" signature="TC_02()[pri:0, instance:api.Topic17_Wait_VI_Explicit_Exercise@573f2bb1]" name="TC_02" duration-ms="52845" started-at="2022-12-23T19:45:00Z" finished-at="2022-12-23T19:45:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_03_Remove_attribute -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:api.Topic15_Javascript_Executor@6d8a00e3]" name="afterClass" is-config="true" duration-ms="860" started-at="2022-12-12T10:13:35Z" finished-at="2022-12-12T10:13:36Z">
+        </test-method> <!-- TC_02 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:api.Topic17_Wait_VI_Explicit_Exercise@573f2bb1]" name="afterClass" is-config="true" duration-ms="862" started-at="2022-12-23T19:45:52Z" finished-at="2022-12-23T19:45:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- api.Topic15_Javascript_Executor -->
+      </class> <!-- api.Topic17_Wait_VI_Explicit_Exercise -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
