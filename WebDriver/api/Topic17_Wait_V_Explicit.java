@@ -20,11 +20,11 @@ public class Topic17_Wait_V_Explicit {
 	@BeforeClass
 	public void beforeClass() {
 		System.setProperty("webdriver.chrome.driver", ".\\browserDrivers\\chromedriver.exe");
+		driver = new ChromeDriver();
 		explicitWait = new WebDriverWait(driver, 15);
 		//Explicit wait là thư viện Java Thread (not Selenium) linh động với 2 case:
 			// 1 - Wait 1 or nhiều Element đến khi hiển thị (visible) - Thấy - Step tiếp
 			// 2 - Wait 1 or nhiều Element đến khi biến mất (invisible) - Biến mất - Step tiếp 
-		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
 		}
