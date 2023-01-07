@@ -14,8 +14,8 @@ public class Topic16_Upload_File {
 	//Biến toàn cục
 	WebDriver driver;
 	String seleniumFileName = "Selenium.png";
-	String eclipseFileName = "Selenium.png";
-	String katalonFileName = "Selenium.png";
+	String eclipseFileName = "Eclipse.jpg";
+	String katalonFileName = "Katalon.png";
 	String seleniumPath = "F:\\Automation\\02 - Selenium API\\uploadFiles\\" + seleniumFileName;
 	String eclipsePath = "F:\\Automation\\02 - Selenium API\\uploadFiles\\" + eclipseFileName;
 	String katalonPath = "F:\\Automation\\02 - Selenium API\\uploadFiles\\" + katalonFileName;
