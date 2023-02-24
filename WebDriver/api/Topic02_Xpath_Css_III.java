@@ -26,7 +26,7 @@ public class Topic02_Xpath_Css_III {
 		//Lấy position:
 			//Xpath: //ol[@id='selectable']/li[6] - //ol[@id='selectable']/li[position()=6]
 			//CSS: li:nth-child(6)
-		//Lấy vị trí đầu - cuối
+		//Lấy vị trí đầu - cuối [index]
 			//Xpath: //ol[@id='selectable']/li[1] - //ol[@id='selectable']/li[last()]
 			//CSS: li:first-child - li:last-child
 		//Sử dụng tham số Contains
