@@ -1,6 +1,6 @@
 package javaTester;
 
-public class Topic12_SapXepMang {
+public class Topic12_SapXepMang_I_Number {
 
 	public static void main(String[] args) {
 		int mang[] = {-2,5,3,6,2,8,9,15,20,-10};

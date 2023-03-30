@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12970" started-at="2023-02-24T16:13:00Z" finished-at="2023-02-24T16:13:13Z">
+  <suite name="Default suite" duration-ms="16747" started-at="2023-03-23T13:17:36Z" finished-at="2023-03-23T13:17:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12970" started-at="2023-02-24T16:13:00Z" finished-at="2023-02-24T16:13:13Z">
-      <class name="Practice.Topic08_Dynamic_Xpath_And_Locator">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:Practice.Topic08_Dynamic_Xpath_And_Locator@48eff760]" name="beforeClass" is-config="true" duration-ms="3818" started-at="2023-02-24T23:13:00Z" finished-at="2023-02-24T23:13:04Z">
+    <test name="Default test" duration-ms="16747" started-at="2023-03-23T13:17:36Z" finished-at="2023-03-23T13:17:53Z">
+      <class name="Practice.Topic07_DemoGuru_Handle_Popup_Editting">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:Practice.Topic07_DemoGuru_Handle_Popup_Editting@7ac7a4e4]" name="beforeClass" is-config="true" duration-ms="6753" started-at="2023-03-23T20:17:37Z" finished-at="2023-03-23T20:17:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TC01_Dynamic_Locator()[pri:0, instance:Practice.Topic08_Dynamic_Xpath_And_Locator@48eff760]" name="TC01_Dynamic_Locator" duration-ms="3251" started-at="2023-02-24T23:13:04Z" finished-at="2023-02-24T23:13:07Z">
+        <test-method status="PASS" signature="TC_01_Register()[pri:0, instance:Practice.Topic07_DemoGuru_Handle_Popup_Editting@7ac7a4e4]" name="TC_01_Register" duration-ms="4723" started-at="2023-03-23T20:17:43Z" finished-at="2023-03-23T20:17:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC01_Dynamic_Locator -->
-        <test-method status="PASS" signature="TC02_Dynamic_Locator()[pri:0, instance:Practice.Topic08_Dynamic_Xpath_And_Locator@48eff760]" name="TC02_Dynamic_Locator" duration-ms="5033" started-at="2023-02-24T23:13:07Z" finished-at="2023-02-24T23:13:12Z">
+        </test-method> <!-- TC_01_Register -->
+        <test-method status="PASS" signature="TC_02_Login()[pri:0, instance:Practice.Topic07_DemoGuru_Handle_Popup_Editting@7ac7a4e4]" name="TC_02_Login" duration-ms="5255" started-at="2023-03-23T20:17:48Z" finished-at="2023-03-23T20:17:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC02_Dynamic_Locator -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:Practice.Topic08_Dynamic_Xpath_And_Locator@48eff760]" name="afterClass" is-config="true" duration-ms="853" started-at="2023-02-24T23:13:12Z" finished-at="2023-02-24T23:13:13Z">
+        </test-method> <!-- TC_02_Login -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:Practice.Topic07_DemoGuru_Handle_Popup_Editting@7ac7a4e4]" name="afterClass" is-config="true" duration-ms="0" started-at="2023-03-23T20:17:53Z" finished-at="2023-03-23T20:17:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- Practice.Topic08_Dynamic_Xpath_And_Locator -->
+      </class> <!-- Practice.Topic07_DemoGuru_Handle_Popup_Editting -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
