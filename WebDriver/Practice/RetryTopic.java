@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Sleeper;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -42,8 +43,12 @@ public class RetryTopic {
 	public void TC_01_Register() {
 		LoginURLpage = driver.getCurrentUrl();
 		
-// 		clickToElement("//a[text()='here']");
-		driver.get("https://demo.guru99.com/");
+ 		clickToElement("//a[text()='here']");
+ 		sleepInsecond(2);
+ 		WebElement frame1 = driver.findElement(By.xpath("//iframe[@id='google_ads_iframe_/24132379/INTERSTITIAL_DemoGuru99_0']"));
+ 	    driver.switchTo().frame(frame1);
+ 		clickToElement("//div[@id='dismiss-button']");
+		
 		  
 
 			
@@ -110,6 +115,12 @@ public class RetryTopic {
 			return rand.nextInt(99999);
 		}
 		
+		public void sleepInsecond(long timeout) {
+			try {
+				Thread.sleep(timeout * 1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}}
 	@AfterClass
 	public void afterClass() {
 		

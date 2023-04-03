@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16747" started-at="2023-03-23T13:17:36Z" finished-at="2023-03-23T13:17:53Z">
+  <suite name="Default suite" duration-ms="8486" started-at="2023-04-03T06:22:11Z" finished-at="2023-04-03T06:22:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16747" started-at="2023-03-23T13:17:36Z" finished-at="2023-03-23T13:17:53Z">
-      <class name="Practice.Topic07_DemoGuru_Handle_Popup_Editting">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:Practice.Topic07_DemoGuru_Handle_Popup_Editting@7ac7a4e4]" name="beforeClass" is-config="true" duration-ms="6753" started-at="2023-03-23T20:17:37Z" finished-at="2023-03-23T20:17:43Z">
+    <test name="Default test" duration-ms="8486" started-at="2023-04-03T06:22:11Z" finished-at="2023-04-03T06:22:19Z">
+      <class name="Practice.RetryTopic">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:Practice.RetryTopic@14acaea5]" name="beforeClass" is-config="true" duration-ms="6153" started-at="2023-04-03T06:22:11Z" finished-at="2023-04-03T06:22:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TC_01_Register()[pri:0, instance:Practice.Topic07_DemoGuru_Handle_Popup_Editting@7ac7a4e4]" name="TC_01_Register" duration-ms="4723" started-at="2023-03-23T20:17:43Z" finished-at="2023-03-23T20:17:48Z">
+        <test-method status="PASS" signature="TC_01_Register()[pri:0, instance:Practice.RetryTopic@14acaea5]" name="TC_01_Register" duration-ms="2312" started-at="2023-04-03T06:22:17Z" finished-at="2023-04-03T06:22:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_01_Register -->
-        <test-method status="PASS" signature="TC_02_Login()[pri:0, instance:Practice.Topic07_DemoGuru_Handle_Popup_Editting@7ac7a4e4]" name="TC_02_Login" duration-ms="5255" started-at="2023-03-23T20:17:48Z" finished-at="2023-03-23T20:17:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_02_Login -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:Practice.Topic07_DemoGuru_Handle_Popup_Editting@7ac7a4e4]" name="afterClass" is-config="true" duration-ms="0" started-at="2023-03-23T20:17:53Z" finished-at="2023-03-23T20:17:53Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:Practice.RetryTopic@14acaea5]" name="afterClass" is-config="true" duration-ms="0" started-at="2023-04-03T06:22:19Z" finished-at="2023-04-03T06:22:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- Practice.Topic07_DemoGuru_Handle_Popup_Editting -->
+      </class> <!-- Practice.RetryTopic -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -18,17 +19,17 @@ public class Topic07_DemoGuru_Handle_Popup_Editting {
 	String LoginURLpage, UserID, Passwordlogin;
 	String name, dob, address, city, state, pin, phone, email, password, customerid;
 	String editAddress, editPhone;
-	
+	String projectLocator = System.getProperty("user.dir");
 		
 	@BeforeClass
 	//Hàm
 	public void beforeClass() {
-		System.setProperty("webdriver.gecko.driver", ".\\browserDrivers\\geckodriver.exe");
-		driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", projectLocator + "\\browserDrivers\\chromedriver.exe");
+		ChromeOptions options = new ChromeOptions();
+		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("https://demo.guru99.com/v4/index.php");
-		
 		email = "automationkfc" + getRandomNumber() + "@gmail.com";	
 	}
 
@@ -36,7 +37,11 @@ public class Topic07_DemoGuru_Handle_Popup_Editting {
 	public void TC_01_Register() {
 		LoginURLpage = driver.getCurrentUrl();
 		
-		  clickToElement("//a[text()='here']");
+		clickToElement("//a[text()='here']");
+ 		sleepInsecond(2);
+ 		WebElement frame1 = driver.findElement(By.xpath("//iframe[@id='google_ads_iframe_/24132379/INTERSTITIAL_DemoGuru99_0']"));
+ 	    driver.switchTo().frame(frame1);
+ 		clickToElement("//div[@id='dismiss-button']");
 		  
 		  
 		  sendkeyToElement("//input[@name='emailid']", email);
@@ -108,6 +113,13 @@ public class Topic07_DemoGuru_Handle_Popup_Editting {
 			Random rand = new Random();
 			return rand.nextInt(99999);
 		}
+		
+		public void sleepInsecond(long timeout) {
+			try {
+				Thread.sleep(timeout * 1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}}
 		
 	@AfterClass
 	public void afterClass() {
