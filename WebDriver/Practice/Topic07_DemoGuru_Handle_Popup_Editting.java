@@ -3,9 +3,11 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -21,8 +23,8 @@ public class Topic07_DemoGuru_Handle_Popup_Editting {
 	@BeforeClass
 	//Hàm
 	public void beforeClass() {
-		System.setProperty("webdriver.chrome.driver", ".\\browserDrivers\\chromedriver.exe");
-		driver = new ChromeDriver();
+		System.setProperty("webdriver.gecko.driver", ".\\browserDrivers\\geckodriver.exe");
+		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("https://demo.guru99.com/v4/index.php");
@@ -36,21 +38,6 @@ public class Topic07_DemoGuru_Handle_Popup_Editting {
 		
 		  clickToElement("//a[text()='here']");
 		  
-			/*
-			 * if (driver.findElements(By.
-			 * xpath("//div[@class='ns-prq5u-e-0 x-layout GoogleActiveViewElement']")).size(
-			 * ) >= 1) { clickToElement("//div[@class='ns-prq5u-e-6 close-button']"); } else
-			 * if (driver.findElements(By.
-			 * xpath("//div[@class='ns-2deee-e-0 x-layout GoogleActiveViewElement']")).size(
-			 * ) >= 1) {
-			 * clickToElement("//div[@class='ns-2deee-e-14 button-common close-button']"); }
-			 * else if (driver.findElements(By.xpath("//div[@class='creative']")).size() >=
-			 * 1) { clickToElement("//div[@id='dismiss-button']"); } else if
-			 * (driver.findElements(By.xpath("//div[@id='cto_banner_content']")).size() >=
-			 * 1) { clickToElement("//div[@id='dismiss-button']"); } else if
-			 * (driver.findElements(By.xpath("//div[@id='ad_position_box']")).size() >= 1) {
-			 * clickToElement("//div[@id='dismiss-button']"); }
-			 */
 		  
 		  sendkeyToElement("//input[@name='emailid']", email);
 		  clickToElement("//input[@type='submit']");
